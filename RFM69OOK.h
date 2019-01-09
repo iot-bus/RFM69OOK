@@ -44,6 +44,9 @@
 #elif defined(__AVR_ATmega32U4__)
   #define RF69OOK_IRQ_PIN          3
   #define RF69OOK_IRQ_NUM          0
+#elif defined(ESP32)
+  #define RF69OOK_IRQ_PIN          35
+  #define RF69OOK_IRQ_NUM          digitalPinToInterrupt(RF69OOK_IRQ_PIN)  
 #endif
 
 #define RF69OOK_MODE_SLEEP       0 // XTAL OFF
